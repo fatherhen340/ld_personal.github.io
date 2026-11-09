@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f3efe6">
+  <meta name="description" content="林知远的个人主页与在线文档：关于研究、阅读与日常思考。">
+  <meta name="author" content="林知远">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="林知远 · 个人主页">
+  <meta property="og:description" content="在算法与人文之间，记录一些认真思考过的东西。">
+  <title>林知远 · 个人主页</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+
+  <div id="site">
+    <header class="site-header" id="site-header">
+      <a class="brand" href="#/" aria-label="回到首页">
+        <span class="brand__mark" aria-hidden="true">知</span>
+        <span class="brand__text">
+          <span class="brand__name" data-profile="name">林知远</span>
+          <span class="brand__sub">PERSONAL ARCHIVE</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="主导航">
+        <a class="nav-link" href="#about" data-scroll="about">简介</a>
+        <a class="nav-link" href="#documents" data-scroll="documents">
+          文档 <span class="nav-count" id="nav-doc-count">03</span>
+        </a>
+        <a class="nav-link" href="#contact" data-scroll="contact">联系</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn--header" type="button" id="studio-open" aria-label="管理内容">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+          <span>管理</span>
+        </button>
+        <button class="nav-toggle" type="button" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="打开导航">
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__backdrop" aria-hidden="true">
+          <span class="hero__seal">见字<br>如面</span>
+          <span class="hero__orbit"></span>
+        </div>
+
+        <div class="hero__inner">
+          <div class="hero__copy">
+            <p class="eyebrow">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span data-profile="status">开放交流与合作</span>
+              <button class="profile-draft-badge" type="button" id="profile-draft-badge" hidden>
+                本地草稿
+              </button>
+              <span class="eyebrow__slash">/</span>
+              <span>PORTFOLIO &amp; NOTES</span>
+            </p>
+
+            <h1 class="hero__title" id="hero-title">
+              <span class="hero__name" data-profile="name">林知远</span>
+            </h1>
+
+            <div class="hero__latin-row">
+              <span class="hero__latin" data-profile="latin">LIN ZHIYUAN</span>
+              <span class="hero__rule" aria-hidden="true"></span>
+              <span class="hero__role" data-profile="role">计算机科学 · 硕士研究生</span>
+            </div>
+
+            <p class="hero__headline" data-profile="headline">在算法与人文之间，记录一些认真思考过的东西。</p>
+
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#documents" data-scroll="documents">
+                浏览文档
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+              <a class="btn btn--ghost" href="#about" data-scroll="about">认识我</a>
+            </div>
+
+            <dl class="hero__meta">
+              <div>
+                <dt>BASE</dt>
+                <dd data-profile="location">杭州 · 中国</dd>
+              </div>
+              <div>
+                <dt>FOCUS</dt>
+                <dd id="hero-focus-text">人机交互 / 知识管理</dd>
+              </div>
+              <div>
+                <dt>MAIL</dt>
+                <dd><a id="hero-email" href="mailto:hello@example.com">hello@example.com</a></dd>
+              </div>
+            </dl>
+          </div>
+
+          <aside class="hero__aside" aria-label="个人档案">
+            <div class="portrait-card">
+              <div class="portrait-card__bar">
+                <span>PROFILE / 01</span>
+                <span id="portrait-year">2026</span>
+              </div>
+              <div class="portrait-card__media">
+                <img id="avatar-img" alt="" hidden>
+                <div class="portrait-card__monogram" id="avatar-monogram" aria-hidden="true">知</div>
+                <div class="portrait-card__grid" aria-hidden="true"></div>
+                <span class="portrait-card__vertical">KEEP<br>CURIOUS</span>
+                <span class="portrait-card__stamp" aria-hidden="true">自<br>述</span>
+              </div>
+              <div class="portrait-card__foot">
+                <p class="portrait-card__label">NOW / 正在发生</p>
+                <p class="portrait-card__now" id="hero-now">正在整理个人知识库，并尝试把研究过程写成可被复用的笔记。</p>
+                <div class="tag-list tag-list--dark" id="hero-focus"></div>
+              </div>
+            </div>
+            <p class="hero__aside-note">
+              <span>持续写作</span>
+              <span aria-hidden="true">↘</span>
+              <span>缓慢更新</span>
+            </p>
+          </aside>
+        </div>
+
+        <div class="stat-strip">
+          <div class="stat">
+            <span class="stat__number" id="stat-docs">03</span>
+            <span class="stat__label">篇公开文档</span>
+          </div>
+          <div class="stat">
+            <span class="stat__number" id="stat-focus">04</span>
+            <span class="stat__label">个关注方向</span>
+          </div>
+          <div class="stat">
+            <span class="stat__number">∞</span>
+            <span class="stat__label">保持好奇</span>
+          </div>
+          <a class="stat__scroll" href="#about" data-scroll="about">
+            <span>向下阅读</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15M6 13l6 6 6-6"/></svg>
+          </a>
+        </div>
+      </section>
+
+      <section class="section section--about" id="about" aria-labelledby="about-title">
+        <div class="section-label" data-reveal>
+          <span class="section-label__index">01</span>
+          <p>关于我<br><span>ABOUT</span></p>
+        </div>
+
+        <div class="section-body">
+          <div class="section-heading" data-reveal>
+            <p class="kicker">A SHORT INTRODUCTION</p>
+            <h2 class="display" id="about-title">把好奇心，<br>变成可以分享的东西。</h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-main" data-reveal>
+              <div class="prose prose--intro" id="profile-intro">
+                <p>你好，我是知远。这里是我的个人主页，也是一个小型的公开笔记本。</p>
+                <p>我关注人与技术之间的关系，喜欢把复杂的问题拆开、慢慢弄清楚，再用文字把过程留下来。这里会放研究随笔、阅读笔记，以及一些尚未成形的想法。</p>
+              </div>
+
+              <div class="focus-block">
+                <p class="micro-label">RESEARCH INTERESTS / 关注方向</p>
+                <div class="tag-list tag-list--large" id="about-focus"></div>
+              </div>
+            </div>
+
+            <aside class="about-aside" data-reveal>
+              <div class="now-card">
+                <p class="now-card__label">NOW / 当前</p>
+                <p class="now-card__text" id="about-now">正在整理个人知识库，并尝试把研究过程写成可被复用的笔记。</p>
+                <span class="now-card__mark" aria-hidden="true">知</span>
+              </div>
+
+              <dl class="fact-list">
+                <div>
+                  <dt>坐标</dt>
+                  <dd data-profile="location">杭州 · 中国</dd>
+                </div>
+                <div>
+                  <dt>邮箱</dt>
+                  <dd><a id="about-email" href="mailto:hello@example.com">hello@example.com</a></dd>
+                </div>
+                <div>
+                  <dt>GitHub</dt>
+                  <dd><a id="about-github" href="https://github.com/yourname" target="_blank" rel="noopener noreferrer">@yourname</a></dd>
+                </div>
+              </dl>
+
+              <p class="about-aside__note">「写作不是记录想清楚的事，<br>而是想清楚的过程。」</p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--docs" id="documents" aria-labelledby="documents-title">
+        <div class="section-label" data-reveal>
+          <span class="section-label__index">02</span>
+          <p>文档<br><span>WRITING</span></p>
+        </div>
+
+        <div class="section-body">
+          <div class="docs-heading" data-reveal>
+            <div>
+              <p class="kicker">NOTES, ESSAYS &amp; FRAGMENTS</p>
+              <h2 class="display" id="documents-title">最近写下的。</h2>
+            </div>
+            <p class="docs-heading__desc">研究笔记、阅读摘要与日常随笔。<br>所有内容都以 Markdown 写作与发布。</p>
+          </div>
+
+          <div class="docs-toolbar" data-reveal>
+            <label class="search-box" for="doc-search">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+              <input type="search" id="doc-search" placeholder="搜索标题、摘要或标签…" autocomplete="off">
+              <button type="button" id="search-clear" aria-label="清空搜索" hidden>×</button>
+            </label>
+            <div class="filter-row" id="tag-filter" aria-label="按标签筛选"></div>
+          </div>
+
+          <div class="docs-grid" id="docs-grid" aria-live="polite"></div>
+
+          <div class="docs-empty" id="docs-empty" hidden>
+            <span aria-hidden="true">⌕</span>
+            <p>没有找到匹配的文档。</p>
+            <button class="text-link" type="button" id="docs-reset">清除筛选</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact__rings" aria-hidden="true"></div>
+        <div class="contact__inner" data-reveal>
+          <p class="kicker kicker--light">HAVE A THOUGHT?</p>
+          <div class="contact__main">
+            <h2 class="contact__title" id="contact-title">有想法，<br><em>就写信给我。</em></h2>
+            <div class="contact__action">
+              <a class="contact__mail" id="contact-email-link" href="mailto:hello@example.com">
+                <span id="contact-email">hello@example.com</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M9 5h10v10"/></svg>
+              </a>
+              <button class="btn btn--outline-light" type="button" id="copy-email">
+                复制邮箱
+              </button>
+            </div>
+          </div>
+          <p class="contact__note">欢迎讨论研究、写作、工具，或任何值得认真聊聊的事。通常会在两三天内回复。</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__left">
+        <span class="brand__mark brand__mark--small" aria-hidden="true">知</span>
+        <p>© <span id="year">2026</span> <span data-profile="name">林知远</span>. 保留所有权利。</p>
+      </div>
+      <div class="site-footer__right">
+        <p>由 Markdown 与一点好奇心驱动</p>
+        <button class="footer-admin" type="button" data-open-studio>编辑与发布 ↗</button>
+      </div>
+    </footer>
+  </div>
+
+  <section class="reader" id="reader" hidden aria-labelledby="reader-title">
+    <div class="reading-progress" aria-hidden="true"><span id="reading-bar"></span></div>
+    <header class="reader__top">
+      <a class="reader__brand" href="#/" id="reader-home">
+        <span class="brand__mark brand__mark--small" aria-hidden="true">知</span>
+        <span>返回首页</span>
+      </a>
+      <div class="reader__actions">
+        <button class="btn btn--tiny" type="button" id="reader-copy">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7 0l2-2a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-2 2a5 5 0 0 0 7 7l1-1"/></svg>
+          复制链接
+        </button>
+        <button class="btn btn--tiny" type="button" id="reader-edit">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+          编辑本文
+        </button>
+      </div>
+    </header>
+
+    <div class="reader__wrap">
+      <article class="reader__article">
+        <header class="reader__header">
+          <div class="reader__meta">
+            <span id="reader-date">2026.11.09</span>
+            <span class="meta-dot" aria-hidden="true"></span>
+            <span id="reader-time">约 3 分钟</span>
+            <span class="reader__draft-badge" id="reader-draft-badge" hidden>本地草稿</span>
+          </div>
+          <h1 id="reader-title" tabindex="-1">文档标题</h1>
+          <p class="reader__summary" id="reader-summary"></p>
+          <div class="tag-list" id="reader-tags"></div>
+        </header>
+
+        <div class="prose prose--reader" id="reader-content"></div>
+
+        <footer class="reader__footer">
+          <div class="reader__footer-line"></div>
+          <p>写于 <span id="reader-date-foot">2026 年 11 月</span> · 感谢阅读</p>
+          <div class="reader__footer-actions">
+            <a class="btn btn--ghost" href="#documents" id="reader-back-bottom">更多文档</a>
+            <button class="btn btn--primary" type="button" id="reader-share">分享这篇文章</button>
+          </div>
+        </footer>
+      </article>
+
+      <aside class="reader__aside">
+        <div class="reader-toc">
+          <p class="micro-label">ON THIS PAGE</p>
+          <nav id="reader-toc" aria-label="文章目录"></nav>
+        </div>
+        <p class="reader__colophon">WRITTEN IN<br>MARKDOWN<br><span>—</span></p>
+      </aside>
+    </div>
+  </section>
+
+  <div class="studio" id="studio" hidden>
+    <div class="studio__scrim" data-close-studio></div>
+    <div class="studio__panel" role="dialog" aria-modal="true" aria-labelledby="studio-title">
+      <header class="studio__header">
+        <div class="studio__title">
+          <span class="studio__mark">编</span>
+          <div>
+            <h2 id="studio-title">内容工作室</h2>
+            <p>写下来，然后让它被看见。</p>
+          </div>
+        </div>
+        <button class="studio__close" type="button" data-close-studio aria-label="关闭管理面板">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </header>
+
+      <nav class="studio__tabs" aria-label="管理功能">
+        <button type="button" class="studio-tab is-active" data-studio-tab="profile">
+          <span>01</span> 个人信息
+        </button>
+        <button type="button" class="studio-tab" data-studio-tab="docs">
+          <span>02</span> 文档
+        </button>
+        <button type="button" class="studio-tab" data-studio-tab="settings">
+          <span>03</span> 发布设置
+        </button>
+        <div class="studio__sync-state" id="studio-sync-state">
+          <span class="sync-dot"></span><span>尚未连接 GitHub</span>
+        </div>
+      </nav>
+
+      <div class="studio__body">
+        <section class="studio-panel is-active" data-studio-panel="profile" aria-labelledby="profile-panel-title">
+          <div class="studio-panel__intro">
+            <div>
+              <p class="kicker">01 / PROFILE</p>
+              <h3 id="profile-panel-title">编辑个人简介</h3>
+            </div>
+            <p>修改后可以先保存为本地草稿预览，确认无误再发布。发布后会更新站点上的简介与联系方式。</p>
+          </div>
+
+          <form class="form" id="profile-form" novalidate>
+            <div class="form-grid">
+              <label class="field">
+                <span>名字</span>
+                <input type="text" id="profile-name" name="name" autocomplete="name" required>
+              </label>
+              <label class="field">
+                <span>英文名 / 拼音</span>
+                <input type="text" id="profile-latin" name="latin" autocomplete="off">
+              </label>
+              <label class="field">
+                <span>身份</span>
+                <input type="text" id="profile-role" name="role" placeholder="计算机科学 · 硕士研究生">
+              </label>
+              <label class="field">
+                <span>当前状态</span>
+                <input type="text" id="profile-status" name="status" placeholder="开放交流与合作">
+              </label>
+              <label class="field">
+                <span>所在地</span>
+                <input type="text" id="profile-location" name="location" placeholder="杭州 · 中国">
+              </label>
+              <label class="field">
+                <span>邮箱</span>
+                <input type="email" id="profile-email" name="email" autocomplete="email">
+              </label>
+              <label class="field">
+                <span>GitHub 主页</span>
+                <input type="url" id="profile-github" name="github" placeholder="https://github.com/yourname">
+              </label>
+              <label class="field">
+                <span>头像图片 URL（可选）</span>
+                <input type="url" id="profile-avatar" name="avatar" placeholder="https://.../avatar.jpg">
+              </label>
+              <label class="field field--full">
+                <span>一句话介绍</span>
+                <textarea id="profile-headline" name="headline" rows="2" placeholder="在算法与人文之间……"></textarea>
+              </label>
+              <label class="field field--full">
+                <span>关注方向（用逗号分隔）</span>
+                <input type="text" id="profile-focus" name="focus" placeholder="人机交互, 知识管理, 可解释 AI">
+              </label>
+              <label class="field field--full">
+                <span>当前正在做</span>
+                <textarea id="profile-now" name="now" rows="2"></textarea>
+              </label>
+              <label class="field field--full">
+                <span>个人简介（Markdown）<small>支持标题、列表、链接与引用</small></span>
+                <textarea class="field__markdown" id="profile-intro-input" name="intro" rows="12"></textarea>
+              </label>
+            </div>
+
+            <div class="form-bar">
+              <div class="form-bar__status">
+                <span id="profile-status-text">当前显示已发布的简介</span>
+                <span class="draft-indicator" id="profile-draft-indicator" hidden>本地草稿</span>
+              </div>
+              <div class="form-bar__actions">
+                <button class="btn btn--ghost btn--small" type="button" id="profile-reset">恢复线上版本</button>
+                <button class="btn btn--soft btn--small" type="button" id="profile-save-draft">保存本地草稿</button>
+                <button class="btn btn--primary btn--small" type="button" id="profile-publish">
+                  <span>发布简介</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+                </button>
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <section class="studio-panel" data-studio-panel="docs" aria-labelledby="docs-panel-title" hidden>
+          <div class="docs-studio">
+            <aside class="docs-studio__list">
+              <div class="docs-studio__list-head">
+                <div>
+                  <p class="kicker">02 / DOCUMENTS</p>
+                  <h3 id="docs-panel-title">文档库</h3>
+                </div>
+                <button class="icon-btn" type="button" id="doc-new" aria-label="新建文档" title="新建文档">+</button>
+              </div>
+              <div class="studio-doc-list" id="studio-doc-list"></div>
+              <p class="docs-studio__hint">草稿只保存在当前浏览器。发布后，所有人才能在主页看到。</p>
+            </aside>
+
+            <div class="doc-editor" id="doc-editor">
+              <div class="doc-editor__head">
+                <div>
+                  <p class="micro-label" id="doc-editor-mode">NEW DOCUMENT</p>
+                  <h3 id="doc-editor-title">新建文档</h3>
+                </div>
+                <div class="doc-editor__badges">
+                  <span class="draft-indicator" id="doc-draft-indicator" hidden>本地草稿</span>
+                  <span class="published-indicator" id="doc-published-indicator" hidden>已发布</span>
+                </div>
+              </div>
+
+              <form id="doc-form" class="form" novalidate>
+                <div class="form-grid form-grid--doc">
+                  <label class="field field--wide">
+                    <span>标题</span>
+                    <input type="text" id="doc-title" required placeholder="给这篇文档一个名字">
+                  </label>
+                  <label class="field">
+                    <span>URL 标识 <small>小写字母、数字、连字符</small></span>
+                    <input type="text" id="doc-slug" required pattern="[a-z0-9]+(?:-[a-z0-9]+)*" placeholder="hello-world">
+                  </label>
+                  <label class="field">
+                    <span>日期</span>
+                    <input type="date" id="doc-date">
+                  </label>
+                  <label class="field">
+                    <span>标签 <small>用逗号分隔</small></span>
+                    <input type="text" id="doc-tags" placeholder="随笔, 方法">
+                  </label>
+                  <label class="field field--wide">
+                    <span>摘要</span>
+                    <textarea id="doc-summary" rows="2" placeholder="一两句话，告诉读者这篇文章在讲什么。"></textarea>
+                  </label>
+                </div>
+
+                <div class="markdown-editor">
+                  <div class="markdown-editor__bar">
+                    <div class="markdown-tools" role="toolbar" aria-label="Markdown 快捷工具">
+                      <button type="button" data-md="h2" title="二级标题">H2</button>
+                      <button type="button" data-md="bold" title="加粗"><strong>B</strong></button>
+                      <button type="button" data-md="italic" title="斜体"><em>I</em></button>
+                      <button type="button" data-md="quote" title="引用">“”</button>
+                      <button type="button" data-md="list" title="无序列表">•</button>
+                      <button type="button" data-md="code" title="行内代码">&lt;/&gt;</button>
+                      <button type="button" data-md="link" title="链接">↗</button>
+                      <button type="button" data-md="divider" title="分隔线">—</button>
+                    </div>
+                    <div class="markdown-editor__meta">
+                      <span id="doc-count">0 字</span>
+                      <span>MARKDOWN</span>
+                    </div>
+                  </div>
+
+                  <div class="markdown-editor__panes">
+                    <label class="sr-only" for="doc-content">Markdown 正文</label>
+                    <textarea class="markdown-editor__input" id="doc-content" spellcheck="false" placeholder="# 从这里开始写
+
+写下你的想法。支持 Markdown 语法，右侧会实时预览。"></textarea>
+                    <div class="markdown-editor__preview" id="doc-preview" aria-live="polite">
+                      <p class="editor-placeholder">实时预览会出现在这里。</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-bar form-bar--doc">
+                  <div class="form-bar__status">
+                    <span id="doc-status-text">新建文档</span>
+                  </div>
+                  <div class="form-bar__actions">
+                    <button class="btn btn--danger-ghost btn--small" type="button" id="doc-delete" hidden>删除草稿</button>
+                    <button class="btn btn--danger-ghost btn--small" type="button" id="doc-unpublish" hidden>下架文档</button>
+                    <button class="btn btn--soft btn--small" type="button" id="doc-save">保存本地草稿</button>
+                    <button class="btn btn--primary btn--small" type="button" id="doc-publish">
+                      <span>发布文档</span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="studio-panel" data-studio-panel="settings" aria-labelledby="settings-panel-title" hidden>
+          <div class="studio-panel__intro">
+            <div>
+              <p class="kicker">03 / PUBLISHING</p>
+              <h3 id="settings-panel-title">连接 GitHub</h3>
+            </div>
+            <p>发布操作会通过 GitHub API 直接提交到你的仓库。令牌只保存在当前浏览器的 localStorage 中，不会发送到其他服务器。</p>
+          </div>
+
+          <div class="settings-grid">
+            <form class="form form--settings" id="settings-form" novalidate>
+              <div class="form-grid">
+                <label class="field">
+                  <span>GitHub 用户名 / 组织名</span>
+                  <input type="text" id="settings-owner" autocomplete="off" placeholder="yourname" required>
+                </label>
+                <label class="field">
+                  <span>仓库名</span>
+                  <input type="text" id="settings-repo" autocomplete="off" placeholder="yourname.github.io" required>
+                </label>
+                <label class="field">
+                  <span>分支</span>
+                  <input type="text" id="settings-branch" autocomplete="off" value="main" required>
+                </label>
+                <label class="field field--full">
+                  <span>Fine-grained Personal Access Token</span>
+                  <div class="token-field">
+                    <input type="password" id="settings-token" autocomplete="off" placeholder="github_pat_..." spellcheck="false">
+                    <button type="button" class="token-toggle" id="token-toggle" aria-label="显示令牌">显示</button>
+                  </div>
+                </label>
+              </div>
+
+              <div class="settings-actions">
+                <button class="btn btn--soft btn--small" type="button" id="settings-test">测试连接</button>
+                <button class="btn btn--primary btn--small" type="submit" id="settings-save">保存设置</button>
+                <button class="btn btn--danger-ghost btn--small" type="button" id="settings-clear">清除连接</button>
+              </div>
+              <p class="settings-status" id="settings-status">尚未连接。填写后先测试连接，再保存。</p>
+            </form>
+
+            <aside class="settings-help">
+              <p class="micro-label">HOW TO CONNECT / 连接步骤</p>
+              <ol>
+                <li>把站点文件上传到 GitHub 仓库，并开启 GitHub Pages。</li>
+                <li>在 GitHub 的 <strong>Settings → Developer settings → Personal access tokens → Fine-grained tokens</strong> 创建令牌。</li>
+                <li>仓库访问权限只选这个站点仓库，权限勾选 <strong>Contents: Read and write</strong>。</li>
+                <li>把令牌粘贴到左侧并保存。之后编辑好内容，点“发布”即可。</li>
+              </ol>
+              <p class="settings-help__note">令牌等同于仓库写入权限，请勿提交到代码库，也不要在公共电脑上保存。如怀疑泄露，请立即在 GitHub 撤销。</p>
+              <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener noreferrer">创建 Fine-grained token ↗</a>
+            </aside>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <div class="busy" id="busy" hidden role="status" aria-live="assertive">
+    <span class="spinner" aria-hidden="true"></span>
+    <p id="busy-text">正在同步到 GitHub…</p>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <noscript>
+    <div class="noscript">这个站点需要 JavaScript 才能阅读 Markdown 文档和进入编辑模式，请启用后重新加载。</div>
+  </noscript>
+
+  <!--
+    内容兜底：如果静态 JSON 或 Markdown 文件暂时读取失败，
+    这些原文可以保证示例文档仍然可读；线上内容始终优先读取 docs/*.md。
+    注意：请通过本地服务器或 GitHub Pages 打开本页，不要直接双击 index.html。
+  -->
+  <script type="text/plain" data-seed-doc="hello-world">
+# 在这里，写下第一行
+
+> 一个地方之所以成为地方，是因为有人在这里留下了痕迹。
+
+这是这个站点的第一篇文档。它没有宏大的开头，只是想为接下来的写作找一个安静的起点。
+
+## 为什么要有这个站点
+
+我们每天都会产生很多想法：读论文时的一句批注、走路时突然想通的问题、和朋友聊天时冒出来的比喻。它们大多数时候停留在便签、聊天框或浏览器标签页里，过一段时间就散掉了。
+
+我想要的不是一个「作品集」，而是一个可以持续生长的**公开笔记本**：
+
+- 把还不成熟的想法先放下来；
+- 允许自己修改、推翻、重新开始；
+- 让偶然路过的人也能读到，并留下一点回声。
+
+这比把每一篇文章都打磨到完美更现实，也更有意思。
+
+## 这里会有什么
+
+目前计划放入三类内容：
+
+1. **研究随笔**：正在读的论文、正在做的实验，以及卡住的地方。
+2. **阅读笔记**：书和文章里值得留下来的句子与延伸思考。
+3. **方法与工具**：知识管理、写作、编程中摸索出来的小方法。
+
+它们不会按照严格的分类体系生长，但会尽量保持真实。
+
+## 关于公开写作
+
+公开写作有一种奇妙的作用：当你知道会有人读到，就会更认真地对待自己的表达；而当你知道不必等待一个完整的答案，就更容易开始。
+
+所以这里的内容会保持一个原则——
+
+> 先写下来，再慢慢变好。
+
+---
+
+如果你也对这些问题感兴趣，欢迎从[关于我](#about)找到联系方式。下一篇，也许就从一个小小的问号开始。
+  </script>
+
+  <script type="text/plain" data-seed-doc="markdown-guide">
+# Markdown 写作速查
+
+这份速查不追求完整，只收录日常写作中最常用的语法。忘记的时候，回来扫一眼就够了。
+
+## 标题与段落
+
+用 `#` 的数量表示标题层级，最多支持六级：
+
+```markdown
+# 一级标题
+## 二级标题
+### 三级标题
+```
+
+段落之间空一行。如果只是想换行，可以在行末留两个空格，但更推荐另起一段。
+
+## 强调与链接
+
+```markdown
+**加粗**  
+*斜体*  
+~~删除线~~  
+[链接文字](https://example.com)
+```
+
+效果分别是：**加粗**、*斜体*、~~删除线~~、[链接文字](https://example.com)。
+
+> 行内代码用一对反引号包裹，例如 `const answer = 42`。
+
+## 列表
+
+无序列表：
+
+```markdown
+- 第一项
+- 第二项
+  - 可以嵌套
+```
+
+有序列表：
+
+```markdown
+1. 第一步
+2. 第二步
+3. 第三步
+```
+
+任务列表：
+
+```markdown
+- [x] 已经完成的事
+- [ ] 还没有开始的事
+```
+
+## 引用与分隔线
+
+```markdown
+> 引用适合放一句重要的话，或者一段需要被强调的摘录。
+```
+
+> 引用适合放一句重要的话，或者一段需要被强调的摘录。
+
+单独一行使用三个短横线可以生成分隔线：
+
+```markdown
+---
+```
+
+---
+
+## 代码块
+
+用三个反引号包裹代码，并在开头注明语言，预览时会有更好的排版：
+
+````markdown
+```python
+def think(question):
+    return question + "?"
+```
+````
+
+```python
+def think(question):
+    return question + "?"
+```
+
+## 表格
+
+```markdown
+| 工具 | 用途 | 频率 |
+| --- | --- | --- |
+| 纸笔 | 捕捉想法 | 每天 |
+| 阅读器 | 深读长文 | 每周 |
+```
+
+| 工具 | 用途 | 频率 |
+| --- | --- | --- |
+| 纸笔 | 捕捉想法 | 每天 |
+| 阅读器 | 深读长文 | 每周 |
+
+## 图片
+
+```markdown
+![图片说明](./assets/example.jpg)
+```
+
+建议把图片放在仓库中，使用相对路径引用。发布后，GitHub Pages 会自动提供图片地址。
+
+## 一条写作建议
+
+不要因为排版而迟迟不开始。**先写内容，再整理格式。** Markdown 的好处正是：它让格式退到后面，让文字回到前面。
+  </script>
+
+  <script type="text/plain" data-seed-doc="research-notes">
+# 研究笔记：从问题到可复用的线索
+
+> 研究最开始的样子，通常不是一条清晰的路径，而是一团需要被慢慢理顺的线。
+
+最近在整理一个关于「个人知识库如何影响研究者的信息组织方式」的小课题。这篇笔记不打算给出结论，只想把起步阶段的方法记录下来，供之后的自己回看。
+
+## 起点：不要把「兴趣」直接当成「问题」
+
+最开始，我写下的题目是：
+
+> 个人知识库对研究工作有什么影响？
+
+这句话看起来像一个问题，但它几乎无法回答。因为「个人知识库」和「影响」都太宽泛了：什么工具算知识库？对哪一类研究工作？影响用什么指标衡量？
+
+于是我把它改写成了三个更小的问题：
+
+1. 研究者在**什么时刻**会主动回到自己的笔记中寻找信息？
+2. 他们依赖哪些线索来**重新找到**几个月前的想法？
+3. 当笔记从文件夹迁移到双向链接工具后，这些线索发生了哪些变化？
+
+问题的边界缩小之后，访谈提纲和观察对象才变得具体。
+
+## 用「问题—线索—下一步」整理材料
+
+我把每一份材料都写成一张短卡片，卡片只保留三个部分：
+
+| 部分 | 要写什么 | 不要写什么 |
+| --- | --- | --- |
+| 问题 | 这段材料回应了哪个小问题 | 泛泛的主题标签 |
+| 线索 | 一个具体事实、原话或反例 | 大段摘抄 |
+| 下一步 | 还需要找谁、找什么 | 模糊的「以后再看」 |
+
+这样做的好处是，材料在收集时就已经带有方向。写论文时不需要重新翻阅所有笔记，只需要沿着问题把线索串起来。
+
+## 一个反直觉的发现
+
+在最初的访谈里，我一直假设「更强大的搜索」会带来更高的效率。但几位受访者都提到，他们其实很少使用全文搜索。
+
+> 我通常记得那件事大概发生在什么时候、当时在做什么项目。比起搜关键词，我更常打开那个项目文件夹，然后顺着日期往下翻。
+
+这提醒我：**人们找回信息的方式，依赖的是情境线索，而不只是语义线索。** 时间、项目、同行者、当时在解决什么问题，都是索引的一部分。
+
+这也让我开始重新看待「知识库的结构」：它不只是分类和标签，更是对未来回忆场景的一种预设。
+
+## 接下来
+
+- [ ] 补充 3—5 位不同学科研究者的访谈；
+- [ ] 记录他们过去两周内实际发生的信息回溯事件；
+- [ ] 对比文件夹式与双向链接式工具中的「线索类型」；
+- [x] 完成第一轮问题改写。
+
+---
+
+*这篇笔记会随着研究推进继续更新。如果你也在做类似的事情，欢迎来信交换想法。*
+  </script>
+
+  <script src="./assets/vendor/marked.min.js"></script>
+  <script src="./assets/vendor/purify.min.js"></script>
+  <script type="module" src="./assets/js/app.js"></script>
+</body>
+</html>
